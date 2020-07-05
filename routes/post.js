@@ -16,7 +16,7 @@ router.get('/protected', requireLogin, (req, res) => {
 })
 router.post("/signin", signin);
 router.post('/post', requireLogin, create);
-router.get('/posts/:email',  requireLogin, list);
+router.post('/posts',  requireLogin, list);
 router.get('/post/:slug',  read);
 router.put('/post/:slug', requireLogin, update);
 router.delete('/post/:slug', requireLogin, remove);

@@ -26,7 +26,7 @@ exports.create = (req, res) => {
 };
 
 exports.list = (req, res ) => {
-    const { email } = req.params;
+    const { email, password } = req.body;
     Post.find({email : email})
         .limit(10)
         .sort({ createdAt: -1 })
